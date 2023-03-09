@@ -1,0 +1,10 @@
+The ReactDOM.render() method takes two arguments, HTML code and an HTML element.
+in this case (<Webmap/>, document.getElementById('app-container'));
+
+The function is trying to display the <Webmap/> component inside the index.html file that has a div with id='app-container'
+
+The code fails occasionally because the function is attempting to execute code or render an element in an index page that hasn't
+been fully loaded yet.
+
+The window.addEventListener("load", () => {}) waits until the page has been "loaded" then runs the anonymous arrow function that
+has the ReactDOM.render() function.
